@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Júlia Gabriela</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
+
+<body>
+    <header class="cabecalho">
+        <a href="#" class="logo">Portfólio Júlia Gabriela</a>
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#sobre" style="--i:2">Sobre Mim</a>
+            <a href="#habilidades" style="--i:3">Habilidades</a>
+            <a href="#projetos" style="--i:4">Projetos</a>
+            <a href="#contato" style="--i:5">Contato</a>
+        </nav>
+    </header>
+    <section class="Home" id="home">
+        <div class="home-content">
+            <h3>Olá, meu nome é</h3>
+            <h1>Júlia Gabriela</h1>
+            <h3>e eu sou <span class="text"></span></h3>
+            <p>A ação é a chave para qualquer sucesso. – Pablo Picasso</p>
+            <div class="home-sci">
+                <a href="https://github.com/JulliaGabriella" style="--i:6"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/j%C3%BAlia-travassos-3447573a7/" style="--i:7"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="mailto:juliagabrielatravassos@gmail.com" style="--i:8"><i class='bx bx-envelope'></i></a>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="sobre-img">
+            <img src="imagens/sobremim.png">
+        </div>
+        <div class="texto-sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou Júlia Gabriela, estudante de Ciência da Computação e apaixonada por tecnologia. Sou programadora e
+                desenvolvedora front-end, com foco na criação de interfaces funcionais, intuitivas e visualmente
+                atraentes. Estou me especializando em Desenvolvimento Full Stack, criando projetos com HTML, CSS e
+                JavaScript durante minha formação, sempre buscando unir lógica, criatividade e boas práticas de
+                desenvolvimento. Estou em constante aprendizado e aberta a novos desafios na área de tecnologia.</p>
+
+            <a href="imagens/Currículo.pdf" download class="botao-curriculo">Baixar Currículo</a>
+        </div>
+    </section>
+
+    <section>
+        <section class="habilidades" id="habilidades">
+            <h2>Habilidades</h2>
+            <span class="linha"></span>
+
+            <div class="skills">
+                <div class="skill">
+                    <i class="devicon-html5-plain"></i>
+                    <p>HTML</p>
+                </div>
+
+                <div class="skill">
+                    <i class="devicon-css3-plain"></i>
+                    <p>CSS</p>
+                </div>
+
+                <div class="skill">
+                    <i class="devicon-javascript-plain"></i>
+                    <p>JavaScript</p>
+                </div>
+
+                <div class="skill">
+                    <i class="devicon-github-original"></i>
+                    <p>GitHub</p>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <section class="projetos" id="projetos">
+        <h2>Projetos</h2>
+        <span class="linha"></span>
+
+        <div class="cards-projetos">
+
+            <div class="card-projeto">
+                <img src="imagens/portfolio.png" alt="Projeto Portfólio">
+                <p>
+                    Portfólio Pessoal — Projeto desenvolvido com HTML, CSS e JavaScript,
+                    totalmente responsivo. Exibe informações sobre mim, habilidades e projetos,
+                    com foco em design moderno e navegação fluida.
+                </p>
+                <a href="#" target="_blank" class="btn-projeto">
+                    🔗 Ver Projeto
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <img src="imagens/lojaArtesanato.png" alt="lojaArtesanato">
+                <p>
+                    Lojinha de Artesanato — Projeto desenvolvido com HTML e CSS, voltado para a apresentação e
+                    divulgação de produtos artesanais. Foco em layout organizado, identidade visual aconchegante e
+                    experiência do usuário simples e intuitiva.
+                </p>
+                <a href="#" target="_blank" class="btn-projeto">
+                    🔗 Ver Projeto
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <img src="imagens/blog.png" alt="Blog de Viagem">
+                <p>
+                    Blog de Viagem — Projeto criado com HTML, CSS e JavaScript, com foco em design responsivo e
+                    organização de conteúdos. Apresenta relatos de viagens, imagens e seções informativas, priorizando
+                    navegação fluida e visual atrativo.
+                </p>
+                <a href="#" target="_blank" class="btn-projeto">
+                    🔗 Ver Projeto
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <img src="imagens/Libras.png" alt="Projeto Libras">
+                <p>
+                    Portfólio de Libras — Projeto institucional desenvolvido para divulgação profissional na área de
+                    Libras. Foco em acessibilidade, clareza das informações e estrutura visual limpa, promovendo
+                    inclusão e comunicação eficiente.
+                </p>
+                <a href="#" target="_blank" class="btn-projeto">
+                    🔗 Ver Projeto
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <h2>Entre em Contato</h2>
+        <span class="linha"></span>
+
+        <form class="form-contato" onsubmit="enviarWhatsApp(event)">
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+            <button type="submit" class="btn-whatsapp">
+                Enviar para WhatsApp
+            </button>
+
+        </form>
+    </section>
+    <footer class="footer">
+        <p>Copyright © 2026 by Júlia Gabriela | All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>
