@@ -168,6 +168,11 @@ body {
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 4rem;
+  margin-top: 0;
+  line-height: 1.2;
+  text-align: justify;
+  line-height: 1.2;
+  max-width: 550px;
 }
 
 .habilidades {
@@ -409,4 +414,5 @@ body {
     transform: translateY(0px);
     opacity: 1;
   }
+
 }
