@@ -266,59 +266,104 @@ body {
   .cabecalho {
     padding: 15px 5%;
     flex-direction: column;
-  }
-
-  .navbar {
-    flex-direction: column;
     gap: 10px;
   }
 
+  .logo {
+    font-size: 22px;
+    text-align: center;
+  }
+
   .navbar a {
+    font-size: 16px;
     margin-left: 0;
-    font-size: 1rem;
+    margin: 5px 10px;
   }
 
   .Home {
     flex-direction: column;
+    height: auto;
+    padding: 120px 5% 40px;
     text-align: center;
-    padding: 40px 5%;
-    min-height: auto;
+  }
+
+  .home-content {
+    max-width: 100%;
   }
 
   .home-content h1 {
-    font-size: 2.2rem;
+    font-size: 36px;
   }
 
   .home-content h3 {
-    font-size: 1.3rem;
+    font-size: 22px;
   }
 
   .home-content p {
-    font-size: 1rem;
+    font-size: 16px;
+  }
+
+  .home-sci {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .sobre {
     grid-template-columns: 1fr;
+    padding: 60px 5%;
     text-align: center;
   }
 
   .texto-sobre h2 {
-    font-size: 2.2rem;
+    font-size: 36px;
   }
 
   .texto-sobre p {
-    font-size: 0.95rem;
-    max-width: 100%;
+    font-size: 16px;
+    margin: 0 auto 2rem;
+  }
+
+  .sobre-img img {
+    max-width: 250px;
+    padding-bottom: 0;
+    margin: 0 auto;
+  }
+
+  .habilidades {
+    padding: 60px 5%;
+  }
+
+  .skills {
+    gap: 25px;
+  }
+
+  .skill {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .projetos {
+    padding: 70px 5%;
   }
 
   .cards-projetos {
     grid-template-columns: 1fr;
   }
 
+  .contato {
+    padding: 70px 5%;
+  }
+
+  .contato h2 {
+    font-size: 32px;
+  }
+
   .footer {
-    font-size: 0.8rem;
+    font-size: 12px;
   }
 }
+
 
 @keyframes slideRight {
   from { transform: translateX(-100px); opacity: 0; }
@@ -339,3 +384,4 @@ body {
   from { transform: translateY(100px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
