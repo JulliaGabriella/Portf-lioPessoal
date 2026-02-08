@@ -12,7 +12,6 @@ html {
 body {
   color: #633f28;
   background: #e7dfd8;
-  padding-top: 90px;
 }
 
 .cabecalho {
@@ -29,10 +28,12 @@ body {
 }
 
 .logo {
+  position: relative;
   font-size: 25px;
   color: #633f28;
   text-decoration: none;
   font-weight: 600;
+  cursor: default;
   opacity: 0;
   animation: slideRight .5s ease forwards;
 }
@@ -55,21 +56,43 @@ body {
 }
 
 .Home {
+  position: relative;
   width: 100%;
-  min-height: 100vh;
-  background: url("imagens/fundo.png") no-repeat center/cover;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
+  justify-content: space-between;
   padding: 70px 10% 0;
 }
 
+
 .home-content {
+  flex: 1;
   max-width: 600px;
+}
+
+.fundo-img {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.fundo-img img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
 }
 
 .home-content h3 {
   font-size: 32px;
   font-weight: 700;
+  opacity: 0;
   animation: slideBottom .5s ease forwards;
 }
 
@@ -77,15 +100,22 @@ body {
   color: #a65936;
 }
 
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 30px;
+  animation: slideTop .5s ease forwards;
+}
+
 .home-content h1 {
   font-size: 56px;
   font-weight: 700;
   margin: -3px 0;
+  opacity: 0;
   animation: slideRight .7s ease forwards;
 }
 
 .home-content p {
   font-size: 20px;
+  opacity: 0;
   animation: slideLeft .7s ease forwards;
 }
 
@@ -95,41 +125,23 @@ body {
   align-items: center;
   width: 40px;
   height: 40px;
-  border: 2px solid #a65936;
+  background: transparent;
+  border: 2px solid;
   color: #a65936;
   border-radius: 50%;
   font-size: 20px;
+  color: #a65936;
   text-decoration: none;
   margin: 30px 15px 30px 0;
   transition: .5s ease;
+  opacity: 0;
   animation: slideLeft .5s ease forwards;
   animation-delay: calc(.2s * var(--i));
 }
 
-.sobre {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 1.5rem;
-  padding: 80px 10%;
-}
-
-.sobre-img img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.texto-sobre h2 {
-  font-size: 60px;
-  color: #a65936;
-}
-
-.texto-sobre p {
-  font-size: 20px;
-  color: #7b5637;
-  line-height: 1.4;
-  max-width: 550px;
-  text-align: justify;
+.home-sci a:hover {
+  color: #633f28;
+  border-radius: #633f28;
 }
 
 .botao-curriculo {
@@ -141,12 +153,64 @@ body {
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-curriculo:hover {
+  background-color: #633f28;
+}
+
+.sobre {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sobre-img img {
+  padding-bottom: 20%;
+  max-width: 630px;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.texto-sobre h2 {
+  font-size: 60px;
+  color: #a65936
+}
+
+.texto-sobre p {
+  color: #7b5637;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+  margin-top: 0;
+  line-height: 1.2;
+  text-align: justify;
+  line-height: 1.2;
+  max-width: 550px;
 }
 
 .habilidades {
   background: #e6d3c3;
   padding: 80px 20px;
   text-align: center;
+}
+
+.habilidades h2 {
+  color: #a65936;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.linha {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #a65936;
+  margin: 0 auto 40px;
+  border-radius: 2px;
 }
 
 .skills {
@@ -160,6 +224,7 @@ body {
   background: #e7dfd8;
   padding: 25px 30px;
   border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill i {
@@ -167,9 +232,27 @@ body {
   color: #a65936;
 }
 
+.skill p {
+  margin-top: 10px;
+  color: #a65936;
+  font-size: 0.9rem;
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px #a65936;
+}
+
 .projetos {
+  background: #e7dfd8;
   padding: 90px 20px;
   text-align: center;
+}
+
+.projetos h2 {
+  color: #633f28;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
 }
 
 .cards-projetos {
@@ -177,7 +260,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 35px;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .card-projeto {
@@ -185,13 +268,53 @@ body {
   border-radius: 16px;
   padding: 20px;
   border: 2px solid #633f28;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 0 20px #7b5637;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
 }
 
 .card-projeto img {
   width: 100%;
   border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card-projeto p {
+  color: #633f28;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card-projeto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px #7b5637;
+}
+
+.btn-projeto {
+  display: inline-block;
+  background: #7b5637;
+  color: #eef;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card-projeto {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-projeto {
+  align-self: center;
+  margin-top: 20px;
+}
+
+.btn-projeto:hover {
+  background: #633f28;
+  transform: scale(1.05);
 }
 
 .contato {
@@ -259,6 +382,55 @@ body {
   padding: 20px 0;
   font-size: 14px;
   font-family: 'Arial', sans-serif;
+}
+
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translatex(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translatex(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -363,25 +535,3 @@ body {
     font-size: 12px;
   }
 }
-
-
-@keyframes slideRight {
-  from { transform: translateX(-100px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideLeft {
-  from { transform: translateX(-100px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideTop {
-  from { transform: translateY(-100px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideBottom {
-  from { transform: translateY(100px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
